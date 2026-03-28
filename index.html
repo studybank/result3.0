@@ -1,0 +1,21 @@
+<input type="text" id="roll" placeholder="Enter Roll Number">
+    <button onclick="openMarksheet()">Search</button>
+
+    <script>
+        function openMarksheet() {
+            var roll = document.getElementById("roll").value;
+
+            if(roll === "") {
+                alert("Please enter roll number");
+                return;
+            }
+
+            var url = "https://ems.educationportal3.in/public/marksheet/" + roll;
+
+            // new tab me open karega
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
